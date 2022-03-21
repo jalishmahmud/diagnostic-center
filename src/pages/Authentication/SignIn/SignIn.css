@@ -1,0 +1,75 @@
+.sign-in-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-in {
+  /* border: 1px solid #bbb; */
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 30px;
+}
+
+.sign-in .sign-in-image img {
+  margin-left: -25px;
+  border-radius: 30px 0 0 30px;
+  min-height: 100%;
+}
+
+.sign-in-form {
+  text-align: left;
+}
+.input-field {
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 14px;
+}
+.custom-sign-up-button {
+  width: 100%;
+  border-radius: 30px;
+  padding: 10px 20px;
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+}
+.custom-sign-up-button:hover {
+  background-color: var(--hover-color);
+  border-color: var(--brand-color);
+}
+.switch-register-sign-in {
+  text-decoration: none;
+  color: var(--brand-color);
+}
+.switch-register-sign-in:hover {
+  text-decoration: none;
+  color: var(--hover-color);
+}
+.social-sign-in-button {
+  border-radius: 30px;
+  padding: 6px 30px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: #282828;
+  border-color: var(--brand-color);
+}
+.social-sign-in-button:hover {
+  color: #fff;
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+}
+.social-sign-in-button.google span:first-child {
+  color: #de4033;
+}
+.social-sign-in-button.google:hover span:first-child {
+  color: #fff;
+}
+.social-sign-in-button.facebook span:first-child {
+  color: #1769da;
+}
+.social-sign-in-button.facebook:hover span:first-child {
+  color: #fff;
+}
+
+.social-sign-in-button span:first-child {
+  font-size: 20px;
+  margin-right: 7px;
+}

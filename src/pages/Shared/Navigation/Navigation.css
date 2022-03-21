@@ -31,9 +31,9 @@
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
-  margin: 0 10px;
+  /* margin: 0 10px; */
 }
-.menu-items a:nth-child(5) {
+.menu-items a:nth-child(6) {
   margin-right: 40px;
 }
 .menu-items a:hover {

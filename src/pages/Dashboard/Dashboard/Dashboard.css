@@ -128,9 +128,17 @@ header label span {
   display: flex;
   align-items: center;
 }
+.user-wrapper h4 {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.user-wrapper small {
+  font-size: 14px;
+  color: #999 !important;
+}
 .user-wrapper img {
   border-radius: 50%;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 }
 .user-wrapper small {
   display: inline-block;

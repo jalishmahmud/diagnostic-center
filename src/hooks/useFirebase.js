@@ -15,6 +15,8 @@ const useFirebase = () => {
   const [user, setUser] = useState({});
   const [authError, setAuthError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [admin, setAdmin] = useState(false);
+  console.log(admin);
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
   // register
@@ -28,7 +30,7 @@ const useFirebase = () => {
 
         // save user to database
         /* saveUser(email, name); */
-        // saveUser(email, name, "POST");
+        saveUser(email, name, "POST");
         // send name to firebase after creation
         updateProfile(auth.currentUser, {
           displayName: name,
@@ -63,12 +65,12 @@ const useFirebase = () => {
     setIsLoading(true);
     signInWithPopup(auth, googleProvider)
       .then((result) => {
-        // const user = result.user;
+        const user = result.user;
         const destination = location?.state?.from || "/";
         navigate(destination);
 
         //   // save user
-        //   saveUser(user.email, user.displayName, "PUT");
+        saveUser(user.email, user.displayName, "PUT");
 
         setAuthError("");
       })
@@ -101,12 +103,29 @@ const useFirebase = () => {
     });
     return () => unsubscribed;
   }, [auth]);
-
+  // check if admin
+  useEffect(() => {
+    fetch(`https://fast-caverns-88455.herokuapp.com/users/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => setAdmin(data.admin));
+  }, [user.email]);
+  // save user to bd
+  const saveUser = (email, displayName, method) => {
+    const user = { email, displayName };
+    fetch("https://fast-caverns-88455.herokuapp.com/users", {
+      method: method,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then();
+  };
   return {
     googleSignIn,
     user,
     authError,
     isLoading,
+    admin,
     logOut,
     registerUser,
     signInUser,

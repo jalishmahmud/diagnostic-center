@@ -90,7 +90,7 @@ const SignIn = () => {
 
                 {/* {isLoading && <Spinner animation="border" variant="primary" />} */}
               </Form>
-              <div className="my-4">- Or Sign in with -</div>
+              <div className="my-4 text-center">- Or Sign in with -</div>
               <div className="d-flex justify-content-between">
                 <Button
                   className="social-sign-in-button google"

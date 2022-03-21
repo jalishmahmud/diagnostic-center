@@ -5,7 +5,7 @@ import diagnosticCenertLogo from "../../../images/diagnostic-center-logo.png";
 import "./Dashboard.css";
 const Dashboard = () => {
   const [activeClass, setActiveClass] = useState("Dashboard");
-  const { user, logOut } = useAuth();
+  const { user, logOut, admin } = useAuth();
 
   const handleActiveClass = (menuName) => {
     setActiveClass(menuName);
@@ -141,7 +141,7 @@ const Dashboard = () => {
             <img src={user.photoURL} alt="" width="30px" height="30px" />
             <div>
               <h4>{user && user.displayName}</h4>
-              {/* {admin ? <small>Super Admin</small> : <span>Student</span>} */}
+              {admin ? <small>Role: Admin</small> : <small>Role: Client</small>}
             </div>
           </div>
         </header>

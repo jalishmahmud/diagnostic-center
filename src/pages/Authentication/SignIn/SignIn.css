@@ -82,3 +82,15 @@
   font-size: 20px;
   margin-right: 7px;
 }
+
+@media only screen and (max-width: 668px) {
+  .sign-in-image {
+    display: none;
+  }
+  .switch-register-sign-in {
+    margin-left: 10px;
+  }
+  .social-sign-in-button {
+    margin-right: 10px;
+  }
+}

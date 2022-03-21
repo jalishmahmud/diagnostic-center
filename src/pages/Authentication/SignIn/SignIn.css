@@ -18,6 +18,15 @@
 .sign-in-form {
   text-align: left;
 }
+.sign-in-field {
+  position: relative;
+}
+.sign-in-field .preloader {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+}
 .input-field {
   border-radius: 30px;
   padding: 12px 20px;

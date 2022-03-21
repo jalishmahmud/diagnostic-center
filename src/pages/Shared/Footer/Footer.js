@@ -20,6 +20,7 @@ const Footer = () => {
               rerum consequuntur sint officiis expedita vel laudantium dolorem
               obcaecati maiores aliquid? Nostrum, illo.
               <a className="" href="/">
+                {" "}
                 learn more
               </a>
             </p>

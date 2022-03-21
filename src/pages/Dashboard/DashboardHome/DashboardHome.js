@@ -1,13 +1,14 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import useAuth from "../../../hooks/useAuth";
 
 const DashboardHome = () => {
-  //   const { user } = useAuth();
+  const { user } = useAuth();
   return (
     <div>
       <Container>
         <h3>
-          Welcome <span className="welcome-user">Jalish Mahmud</span>
+          Welcome <span className="welcome-user">{user.displayName}</span>
         </h3>
 
         <div>

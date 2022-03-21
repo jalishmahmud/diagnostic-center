@@ -1,26 +1,35 @@
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Alert, Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
+import preloader from "../../../images/preloader.gif";
 import signInBg from "../../../images/sign-up-bg.jpg";
 import Footer from "../../Shared/Footer/Footer";
 import Navigation from "../../Shared/Navigation/Navigation";
 import "./SignIn.css";
 const SignIn = () => {
-  const [logInInfo, setLogInInfo] = useState({});
-
+  const { signInUser, authError, googleSignIn, isLoading } = useAuth();
+  const [signInInfo, setSignInInfo] = useState({});
+  const location = useLocation();
+  const navigate = useNavigate();
   const getInputFieldValue = (e) => {
     const field = e.target.name;
     const value = e.target.value;
-    const newLogInInfo = { ...logInInfo };
-    newLogInInfo[field] = value;
-    setLogInInfo(newLogInInfo);
+    const newSignInInfo = { ...signInInfo };
+    newSignInInfo[field] = value;
+    setSignInInfo(newSignInInfo);
   };
-  const handleUserLgoIn = (e) => {
+  const handleUserSignIn = (e) => {
     e.preventDefault();
+    console.log(authError);
+    signInUser(signInInfo.email, signInInfo.password, location, navigate);
   };
-  const handleGoogleSignIn = () => {};
+
+  const handleGoogleSignIn = () => {
+    googleSignIn(location, navigate);
+  };
   return (
     <>
       <Navigation></Navigation>
@@ -30,9 +39,12 @@ const SignIn = () => {
             <Col md={6} xs={12} className="sign-in-image">
               <img className="img-fluid" src={signInBg} alt="" />
             </Col>
-            <Col md={6} xs={12} className=" p-5 ">
+            <Col md={6} xs={12} className=" p-5  sign-in-field">
               <h2 className="mb-3">Login </h2>
-              <Form className="sign-in-form" onSubmit={handleUserLgoIn}>
+              {isLoading && (
+                <img className="preloader" src={preloader} alt="" />
+              )}
+              <Form className="sign-in-form" onSubmit={handleUserSignIn}>
                 <Form.Group className="mb-4" controlId="formBasicEmail">
                   <Form.Control
                     className="input-field"
@@ -59,11 +71,11 @@ const SignIn = () => {
                 >
                   Sign In
                 </Button>
-                {/* {authError && (
+                {authError && (
                   <Alert className="my-3" variant="danger">
                     {authError}
                   </Alert>
-                )} */}
+                )}
 
                 <Form.Group
                   className="mb-4 d-flex justify-content-between"

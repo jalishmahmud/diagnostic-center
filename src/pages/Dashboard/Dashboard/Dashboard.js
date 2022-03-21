@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 import diagnosticCenertLogo from "../../../images/diagnostic-center-logo.png";
 import "./Dashboard.css";
 const Dashboard = () => {
   const [activeClass, setActiveClass] = useState("Dashboard");
-  //   const { admin, user, signOutUser } = useAuth();
+  const { user, logOut } = useAuth();
 
   const handleActiveClass = (menuName) => {
     setActiveClass(menuName);
@@ -117,7 +118,7 @@ const Dashboard = () => {
               </Link>
             </li>
             <li>
-              <Link to="/">
+              <Link to="/" onClick={logOut}>
                 <span class="las la-sign-out-alt"></span> <span>Logout</span>
               </Link>
             </li>
@@ -137,12 +138,10 @@ const Dashboard = () => {
             <input type="search" placeholder="Search Here" />
           </div>
           <div class="user-wrapper">
-            {/* <img src={user.photoURL} alt="" width="30px" height="30px" /> */}
+            <img src={user.photoURL} alt="" width="30px" height="30px" />
             <div>
-              {/* <h4>{user && user.displayName}</h4>
-              {admin ? <small>Super Admin</small> : <span>Student</span>} */}
-              <h4>Jalish Mahmud</h4>
-              <small>Super Admin</small> : <span>Student</span>
+              <h4>{user && user.displayName}</h4>
+              {/* {admin ? <small>Super Admin</small> : <span>Student</span>} */}
             </div>
           </div>
         </header>

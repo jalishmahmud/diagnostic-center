@@ -1,15 +1,20 @@
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Alert, Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
+import preloader from "../../../images/preloader.gif";
 import signInBg from "../../../images/sign-up-bg.jpg";
 import Footer from "../../Shared/Footer/Footer";
 import Navigation from "../../Shared/Navigation/Navigation";
 
 const Register = () => {
   const [registerInfo, setRegisterInfo] = useState({});
+  const { user, googleSignIn, registerUser, isLoading, authError } = useAuth();
+  const location = useLocation();
 
+  const navigate = useNavigate();
   const getInputFieldValue = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -19,8 +24,16 @@ const Register = () => {
   };
   const handleUserRegister = (e) => {
     e.preventDefault();
+    registerUser(
+      registerInfo.email,
+      registerInfo.password,
+      registerInfo.name,
+      navigate
+    );
   };
-  const handleGoogleSignIn = () => {};
+  const handleGoogleSignIn = () => {
+    googleSignIn(location, navigate);
+  };
   return (
     <>
       <Navigation></Navigation>
@@ -30,8 +43,11 @@ const Register = () => {
             <Col md={6} xs={12} className="sign-in-image">
               <img className="img-fluid" src={signInBg} alt="" />
             </Col>
-            <Col md={6} xs={12} className=" p-5 ">
+            <Col md={6} xs={12} className=" p-5  sign-in-field">
               <h2 className="mb-3">Register </h2>
+              {isLoading && (
+                <img className="preloader" src={preloader} alt="" />
+              )}
               <Form className="sign-in-form" onSubmit={handleUserRegister}>
                 <Form.Group className="mb-4" controlId="formBasicEmail">
                   <Form.Control
@@ -68,11 +84,11 @@ const Register = () => {
                 >
                   Register
                 </Button>
-                {/* {authError && (
+                {authError && (
                   <Alert className="my-3" variant="danger">
                     {authError}
                   </Alert>
-                )} */}
+                )}
 
                 <Form.Group
                   className="mb-4 d-flex justify-content-between"

@@ -1,9 +1,11 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 import diagnosticCenterLogo from "../../../images/diagnostic-center-logo.png";
 import "./Navigation.css";
 const Navigation = () => {
+  const { user, logOut } = useAuth();
   return (
     <Navbar collapseOnSelect expand="lg" variant="light">
       <Container className="custom-nav py-1">
@@ -36,12 +38,26 @@ const Navigation = () => {
           <Nav.Link as={Link} to="/contact">
             Contact
           </Nav.Link>
-          <Nav.Link as={Link} to="/sign-in">
-            Sign in
-          </Nav.Link>
-          <Nav.Link as={Link} to="/dashboard">
-            Dashboard
-          </Nav.Link>
+          {user.email && (
+            <Nav.Link className="custom-nav-style" as={Link} to="/dashboard">
+              Dashboard
+            </Nav.Link>
+          )}
+          {!user.email ? (
+            <Nav.Link className="custom-nav-style" as={Link} to="/sign-in">
+              Sign in
+            </Nav.Link>
+          ) : (
+            <Nav.Link
+              className="custom-nav-style"
+              onClick={logOut}
+              as={Link}
+              to="/sign-in"
+            >
+              Sign Out
+            </Nav.Link>
+          )}
+
           <Nav.Link as={Link} className="custom-btn" to="/online-appointment">
             Appointment
           </Nav.Link>

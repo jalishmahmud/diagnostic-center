@@ -1,0 +1,28 @@
+.input-field {
+}
+.input-field input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #bbb;
+  padding: 10px 15px;
+  border-radius: 30px;
+}
+.input-field button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #bbb;
+  padding: 10px 15px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--brand-color);
+  border: 1px solid var(--brand-color);
+  transition: all 300ms;
+}
+.input-field button:hover {
+  background-color: transparent;
+  color: var(--brand-color);
+}

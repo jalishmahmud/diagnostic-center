@@ -221,6 +221,10 @@ thead tr {
   /* border-top: 1px solid #f0f0f0; */
   border-bottom: 2px solid #f0f0f0;
 }
+tbody tr {
+  /* border-top: 1px solid #f0f0f0; */
+  border-bottom: 1px solid #f0f0f0;
+}
 thead td {
   font-weight: 700;
 }

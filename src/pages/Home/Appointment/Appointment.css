@@ -1,0 +1,18 @@
+.appointment-wrapper {
+  margin-top: 50px;
+}
+.appointment-wrapper .single-doctor {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: inherit;
+  margin-top: 0;
+}
+.appointment-wrapper .single-doctor img {
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+.appointment-wrapper .single-doctor p {
+  margin-bottom: 10px;
+}
+.appointment-wrapper .single-doctor .input-field input {
+}

@@ -1,0 +1,15 @@
+.doctors-wrapper.dashboard-doctor {
+  margin-top: 30px;
+}
+.doctors-wrapper.dashboard-doctor .section-title {
+  margin-bottom: 40px;
+}
+.doctors-wrapper.dashboard-doctor .section-title {
+  margin-bottom: 40px;
+}
+.doctors-wrapper.dashboard-doctor .single-doctor img {
+  max-width: 100px;
+}
+.doctors-wrapper.dashboard-doctor .single-doctor {
+  align-items: flex-start;
+}

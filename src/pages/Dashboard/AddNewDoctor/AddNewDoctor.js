@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Alert, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import preloader from "../../../images/preloader.gif";
 import "./AddNewDoctor.css";
@@ -19,7 +20,7 @@ const AddNewDoctor = () => {
     setIsLoading(true);
     data.date = date.toLocaleDateString();
     data.adminEmail = user.email;
-    fetch("http://localhost:4000/doctors", {
+    fetch("https://fast-caverns-88455.herokuapp.com/doctors", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -52,9 +53,12 @@ const AddNewDoctor = () => {
                       alt=""
                     />
                   )}
-                  <button>
-                    See all <span class="las la-arrow-right"></span>
-                  </button>
+                  <Link
+                    className="custom-link-button"
+                    to="/dashboard/all-doctors"
+                  >
+                    All Doctors<span class="las la-arrow-right"></span>
+                  </Link>
                 </div>
                 <div class="card-body">
                   <form

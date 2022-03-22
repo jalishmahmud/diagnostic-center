@@ -1,8 +1,19 @@
-import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import doctor1 from "../../../images/doctor-1.jpg";
+import React, { useEffect, useState } from "react";
+import { Container, Row } from "react-bootstrap";
+import Doctor from "../Doctor/Doctor";
 import "./Doctors.css";
 const Doctors = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [doctors, setDoctors] = useState([]);
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("https://fast-caverns-88455.herokuapp.com/doctors/")
+      .then((res) => res.json())
+      .then((data) => {
+        setDoctors(data);
+        setIsLoading(false);
+      });
+  }, []);
   return (
     <div className="doctors-wrapper">
       <Container>
@@ -12,90 +23,9 @@ const Doctors = () => {
         </div>
 
         <Row>
-          <Col md={6}>
-            <div className="single-doctor">
-              <img className="img-fluid" src={doctor1} alt="" />
-
-              <div>
-                <h3>Dr. Anamul Hossain</h3>
-                <small>MBBS, FCPS, MD (Brain)</small>
-                <h5>Neurology specialist</h5>
-                <p>
-                  <span> Consultation Fee:</span> 700 BDT
-                </p>
-                <p>
-                  <span>Time:</span> Sun - Thu, 7:00 pm - 11:00 pm
-                </p>
-                <p className="rating">
-                  <span> Rating :</span> 5*
-                </p>
-                <button className="appointment-btn">Appointment</button>
-              </div>
-            </div>
-          </Col>
-          <Col md={6}>
-            <div className="single-doctor">
-              <img className="img-fluid" src={doctor1} alt="" />
-
-              <div>
-                <h3>Dr. Anamul Hossain</h3>
-                <small>MBBS, FCPS, MD (Brain)</small>
-                <h5>Neurology specialist</h5>
-                <p>
-                  <span> Consultation Fee:</span> 700 BDT
-                </p>
-                <p>
-                  <span>Time:</span> Sun - Thu, 7:00 pm - 11:00 pm
-                </p>
-                <p className="rating">
-                  <span> Rating :</span> 5*
-                </p>
-                <button className="appointment-btn">Appointment</button>
-              </div>
-            </div>
-          </Col>
-          <Col md={6}>
-            <div className="single-doctor">
-              <img className="img-fluid" src={doctor1} alt="" />
-
-              <div>
-                <h3>Dr. Anamul Hossain</h3>
-                <small>MBBS, FCPS, MD (Brain)</small>
-                <h5>Neurology specialist</h5>
-                <p>
-                  <span> Consultation Fee:</span> 700 BDT
-                </p>
-                <p>
-                  <span>Time:</span> Sun - Thu, 7:00 pm - 11:00 pm
-                </p>
-                <p className="rating">
-                  <span> Rating :</span> 5*
-                </p>
-                <button className="appointment-btn">Appointment</button>
-              </div>
-            </div>
-          </Col>
-          <Col md={6}>
-            <div className="single-doctor">
-              <img className="img-fluid" src={doctor1} alt="" />
-
-              <div>
-                <h3>Dr. Anamul Hossain</h3>
-                <small>MBBS, FCPS, MD (Brain)</small>
-                <h5>Neurology specialist</h5>
-                <p>
-                  <span> Consultation Fee:</span> 700 BDT
-                </p>
-                <p>
-                  <span>Time:</span> Sun - Thu, 7:00 pm - 11:00 pm
-                </p>
-                <p className="rating">
-                  <span> Rating :</span> 5*
-                </p>
-                <button className="appointment-btn">Appointment</button>
-              </div>
-            </div>
-          </Col>
+          {doctors.slice(0, 4).map((doctor) => (
+            <Doctor key={doctor._id} doctor={doctor}></Doctor>
+          ))}
         </Row>
       </Container>
     </div>

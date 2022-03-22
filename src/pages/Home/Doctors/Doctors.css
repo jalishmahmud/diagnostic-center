@@ -1,0 +1,65 @@
+.doctors-wrapper {
+  margin-top: 100px;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.section-title h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.section-title p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.single-doctor {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 40px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.1);
+  border-radius: 30px;
+  transition: all 300ms;
+  margin-bottom: 30px;
+}
+
+.single-doctor h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.single-doctor small {
+  color: #333;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.single-doctor h5 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.single-doctor p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.single-doctor p span {
+  font-weight: 500;
+}
+.single-doctor button {
+  border: 1px solid var(--brand-color);
+  background-color: var(--brand-color);
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  margin-top: 20px;
+
+  transition: all 300ms;
+}
+.single-doctor button:hover {
+  background-color: #fff;
+  color: var(--brand-color);
+}

@@ -1,0 +1,38 @@
+.departments-wrapper {
+  margin-top: 150px;
+}
+.single-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.1);
+  border-radius: 30px;
+  transition: all 300ms;
+}
+.single-card:hover {
+  box-shadow: 0 5px 30px rgb(0 0 0 / 0.2);
+}
+
+.single-card.middle {
+  margin-top: -50px;
+}
+.single-card span {
+  color: var(--brand-color);
+  font-size: 70px;
+  margin-bottom: 30px;
+  transition: all 300ms;
+}
+.single-card:hover span {
+  color: #282828 !important;
+}
+.single-card h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.single-card p {
+  font-size: 16px;
+  line-height: 24px;
+}

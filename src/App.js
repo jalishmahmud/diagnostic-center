@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import "./App.css";
 import AuthProvider from "./context/AuthProvider/AuthProvider";
 import About from "./pages/About/About";
@@ -17,7 +19,6 @@ import MakeAdmin from "./pages/Dashboard/MakeAdmin/MakeAdmin";
 import NewAppointment from "./pages/Dashboard/NewAppointment/NewAppointment";
 import Home from "./pages/Home/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
-
 function App() {
   return (
     <AuthProvider>

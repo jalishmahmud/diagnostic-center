@@ -4,6 +4,7 @@ import Navigation from "../../Shared/Navigation/Navigation";
 import Banner from "../Banner/Banner";
 import Departments from "../Departments/Departments";
 import Doctors from "../Doctors/Doctors";
+import Testimonials from "../Testimonials/Testimonials";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Banner></Banner>
       <Departments></Departments>
       <Doctors></Doctors>
+      <Testimonials></Testimonials>
       <Footer></Footer>
     </div>
   );

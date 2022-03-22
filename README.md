@@ -19,3 +19,5 @@ User: test@test.com Password: #2021dev
 - This is a full diagnostic center management react app
 - This app has two user role, admin and clint
 - As project is under constructions, so all features will be described later.
+
+Thanks

@@ -13,100 +13,88 @@ const Doctors = () => {
 
         <Row>
           <Col md={6}>
-            <Row>
-              <div className="single-doctor">
-                <Col md={5}>
-                  <img className="img-fluid" src={doctor1} alt="" />
-                </Col>
-                <Col md={7}>
-                  <h3>Dr. Anamul Hossain</h3>
-                  <small>MBBS, FCPS, MD (Brain)</small>
-                  <h5>Neurology specialist</h5>
-                  <p>
-                    <span> Consultation Fee:</span> 700 BDT
-                  </p>
-                  <p>
-                    <span>Time:</span> Sun - Thu, 7:00 pm - 11:00 pm
-                  </p>
-                  <p className="rating">
-                    <span> Rating :</span> 5*
-                  </p>
-                  <button className="appointment-btn">Appointment</button>
-                </Col>
+            <div className="single-doctor">
+              <img className="img-fluid" src={doctor1} alt="" />
+
+              <div>
+                <h3>Dr. Anamul Hossain</h3>
+                <small>MBBS, FCPS, MD (Brain)</small>
+                <h5>Neurology specialist</h5>
+                <p>
+                  <span> Consultation Fee:</span> 700 BDT
+                </p>
+                <p>
+                  <span>Time:</span> Sun - Thu, 7:00 pm - 11:00 pm
+                </p>
+                <p className="rating">
+                  <span> Rating :</span> 5*
+                </p>
+                <button className="appointment-btn">Appointment</button>
               </div>
-            </Row>
+            </div>
           </Col>
           <Col md={6}>
-            <Row>
-              <div className="single-doctor">
-                <Col md={5}>
-                  <img className="img-fluid" src={doctor1} alt="" />
-                </Col>
-                <Col md={7}>
-                  <h3>Dr. Anamul Hossain</h3>
-                  <small>MBBS, FCPS, MD (Brain)</small>
-                  <h5>Neurology specialist</h5>
-                  <p>
-                    <span> Consultation Fee:</span> 700 BDT
-                  </p>
-                  <p>
-                    <span>Time:</span> Sun - Thu, 7:00 pm - 11:00 pm
-                  </p>
-                  <p className="rating">
-                    <span> Rating :</span> 5*
-                  </p>
-                  <button className="appointment-btn">Appointment</button>
-                </Col>
+            <div className="single-doctor">
+              <img className="img-fluid" src={doctor1} alt="" />
+
+              <div>
+                <h3>Dr. Anamul Hossain</h3>
+                <small>MBBS, FCPS, MD (Brain)</small>
+                <h5>Neurology specialist</h5>
+                <p>
+                  <span> Consultation Fee:</span> 700 BDT
+                </p>
+                <p>
+                  <span>Time:</span> Sun - Thu, 7:00 pm - 11:00 pm
+                </p>
+                <p className="rating">
+                  <span> Rating :</span> 5*
+                </p>
+                <button className="appointment-btn">Appointment</button>
               </div>
-            </Row>
+            </div>
           </Col>
           <Col md={6}>
-            <Row>
-              <div className="single-doctor">
-                <Col md={5}>
-                  <img className="img-fluid" src={doctor1} alt="" />
-                </Col>
-                <Col md={7}>
-                  <h3>Dr. Anamul Hossain</h3>
-                  <small>MBBS, FCPS, MD (Brain)</small>
-                  <h5>Neurology specialist</h5>
-                  <p>
-                    <span> Consultation Fee:</span> 700 BDT
-                  </p>
-                  <p>
-                    <span>Time:</span> Sun - Thu, 7:00 pm - 11:00 pm
-                  </p>
-                  <p className="rating">
-                    <span> Rating :</span> 5*
-                  </p>
-                  <button className="appointment-btn">Appointment</button>
-                </Col>
+            <div className="single-doctor">
+              <img className="img-fluid" src={doctor1} alt="" />
+
+              <div>
+                <h3>Dr. Anamul Hossain</h3>
+                <small>MBBS, FCPS, MD (Brain)</small>
+                <h5>Neurology specialist</h5>
+                <p>
+                  <span> Consultation Fee:</span> 700 BDT
+                </p>
+                <p>
+                  <span>Time:</span> Sun - Thu, 7:00 pm - 11:00 pm
+                </p>
+                <p className="rating">
+                  <span> Rating :</span> 5*
+                </p>
+                <button className="appointment-btn">Appointment</button>
               </div>
-            </Row>
+            </div>
           </Col>
           <Col md={6}>
-            <Row>
-              <div className="single-doctor">
-                <Col md={5}>
-                  <img className="img-fluid" src={doctor1} alt="" />
-                </Col>
-                <Col md={7}>
-                  <h3>Dr. Anamul Hossain</h3>
-                  <small>MBBS, FCPS, MD (Brain)</small>
-                  <h5>Neurology specialist</h5>
-                  <p>
-                    <span> Consultation Fee:</span> 700 BDT
-                  </p>
-                  <p>
-                    <span>Time:</span> Sun - Thu, 7:00 pm - 11:00 pm
-                  </p>
-                  <p className="rating">
-                    <span> Rating :</span> 5*
-                  </p>
-                  <button className="appointment-btn">Appointment</button>
-                </Col>
+            <div className="single-doctor">
+              <img className="img-fluid" src={doctor1} alt="" />
+
+              <div>
+                <h3>Dr. Anamul Hossain</h3>
+                <small>MBBS, FCPS, MD (Brain)</small>
+                <h5>Neurology specialist</h5>
+                <p>
+                  <span> Consultation Fee:</span> 700 BDT
+                </p>
+                <p>
+                  <span>Time:</span> Sun - Thu, 7:00 pm - 11:00 pm
+                </p>
+                <p className="rating">
+                  <span> Rating :</span> 5*
+                </p>
+                <button className="appointment-btn">Appointment</button>
               </div>
-            </Row>
+            </div>
           </Col>
         </Row>
       </Container>

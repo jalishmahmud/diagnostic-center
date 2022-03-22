@@ -5,6 +5,7 @@
   box-shadow: 0 5px 10px rgb(0 0 0 / 0.1);
   border-radius: 30px;
   padding: 40px;
+  background-color: var(--off-white-color);
 }
 .testimonial .section-title {
   margin-top: 20px;
@@ -41,7 +42,7 @@
 .single-testimonial .meta-data .meta-text h5 {
   font-size: 18px;
   font-weight: 400;
-  color: #2565e1;
+  color: var(--brand-color);
   margin-bottom: 0;
 }
 .single-testimonial .meta-data .meta-text small {

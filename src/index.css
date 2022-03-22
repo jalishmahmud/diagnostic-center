@@ -1,7 +1,9 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif !important;
-  background-color: #fbfbfb;
+  /* background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); */
+  background-image: linear-gradient(to bottom, #fef4db, #f1f1f1);
+  /* background-color: #fef4db; */
 }
 
 code {
@@ -19,8 +21,10 @@ code {
   text-decoration: none !important;
 }
 :root {
-  --brand-color: #019d9e;
+  /* --brand-color: #019d9e; */
+  --brand-color: #f29b37;
   --hover-color: #028c8c;
   --blue-color: #253049;
   --text-color: #282828;
+  --off-white-color: #fff;
 }

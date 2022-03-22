@@ -2,7 +2,7 @@
   background-image: linear-gradient(
     to right,
     #ff512f 0%,
-    #dd2476 51%,
+    #f29b37 51%,
     #ff512f 100%
   );
 }
@@ -41,7 +41,7 @@
 }
 .custom-nav-style {
   font-weight: 600 !important;
-  color: var(--brand-color) !important;
+  color: #f29b37 !important;
 }
 .custom-nav-style:hover {
   color: var(--hover-color) !important;

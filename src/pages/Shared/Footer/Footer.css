@@ -1,24 +1,25 @@
 .footer {
-  background-color: #028c8c;
+  background-color: transparent;
   text-align: left;
   margin-top: 100px;
 }
 .footer-content {
-  color: #f1f1f1;
+  color: var(--text-color);
 }
 .footer-content h4 {
-  color: #fff;
+  color: var(--text-color);
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 .footer-content h6 {
-  color: #fff;
+  color: var(--text-color);
   font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 300;
+  font-weight: 600;
 }
 .footer-content ul {
   padding: 0;
@@ -28,12 +29,12 @@
 }
 .footer-content ul li a {
   text-decoration: none;
-  color: #f1f1f1;
+  color: var(--text-color);
   line-height: 30px;
   transition: all 0.3s ease-in-out;
 }
 .footer-content ul li a:hover {
-  color: #e12429;
+  color: var(--brand-color);
 }
 .footer-content span {
   font-size: 14px;
@@ -46,31 +47,31 @@
   transition: all 0.3s ease-in-out;
 }
 .footer-content span:hover {
-  border: 1px solid #e12429;
+  border: 1px solid var(--brand-color);
 }
 .footer-content p a {
   text-decoration: none;
-  color: #f1f1f1;
+  color: var(--text-color);
   transition: all 300ms;
 }
 p.copyrhgit a {
   text-decoration: none;
-  color: #f1f1f1;
+  color: var(--text-color);
   transition: all 300ms;
 }
 .footer-content p a:hover,
 p.copyrhgit a:hover {
   text-decoration: none;
-  color: #ddd;
+  color: var(--brand-color);
 }
 .contact-info a {
   text-decoration: none;
-  color: #f1f1f1;
+  color: var(--text-color);
   display: inline-block;
   margin-bottom: 15px;
 }
 .copyrhgit {
   font-size: 14px;
-  color: #fff;
-  border-top: 1px solid #ddd;
+  color: var(--text-color);
+  border-top: 1px solid #fff;
 }
